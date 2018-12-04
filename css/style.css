@@ -1,0 +1,277 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+:root {
+  --mainColor: #42c0fb;
+  --navColor: #42c0fb;
+  --backgroundColor: #eee;
+  --accentColor: #20a0f9;
+  --lightText: #eee;
+  --darkText: #000;
+  --mainFont: 'Audiowide', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+/*   border: 1px solid red; */
+}
+body {
+  background-color: var(--backgroundColor);
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  z-index: 2;
+  background-color: var(--navColor);
+  top: 0px;
+}
+.logo {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header-img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin-left: 20px;
+}
+nav {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-link{
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+.nav-link:hover {
+  color: #323232;
+}
+
+/* Email Capture Section */
+
+h1{
+  position: block;
+  padding-top: 100px;
+  text-align: center;
+}
+
+input {
+  display: block;
+  margin: 15px auto;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+}
+#email {
+  width: 30%;
+}
+#submit{
+  font-weight: 700;
+}
+.btn {
+  background-color: var(--accentColor);
+  border-radius: 3px;
+  transition: all .5s;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: var(--darkText);
+}
+.btn:hover {
+  background-color: var(--mainColor);
+}
+
+/* Product Features Highlight Section */
+
+#features {
+  padding: 3% 7%;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  padding-top: 3%
+}
+.description {
+  font-size: 18px;
+}
+.icon {
+  justify-self: center;
+  align-self: center;
+}
+i {
+  color: var(--accentColor);
+}
+
+/* Video */
+
+#how-it-works {
+  max-width: 560px;
+  width: 100%;
+  margin: 30px auto 30px auto;
+}
+.iframeDiv {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+  iframe {
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+/* Pricing Section */
+#pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.pricing {
+  border: 1px black solid;
+}
+
+.pricing p {
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  background: #323232;
+  color: var(--lightText);
+}
+
+.pricing h2 {
+  font-size: 32px;
+  padding: 10px 0px;
+}
+
+.pricing ol li {
+  padding: 5px 0px;
+}
+
+.pricing button {
+  margin: 20px 0;
+}
+
+ol {
+  list-style: none;
+}
+
+/* Footer */
+
+footer {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+  color: var(--lightText);
+}
+
+.footer__links {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.footer__links a {
+  padding: 0px 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--lightText);
+}
+.footer__links a:hover {
+  color: #bbb;
+}
+
+@media (max-width: 920px) {
+  header {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .logo {
+    width: 100%;
+    display: flex;
+  }
+  #header-img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    margin: 0 auto;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-link {
+    padding: 10px;
+  }
+  
+  h1 {
+    margin-top: 120px;
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  .icon {
+    display: none;
+  }
+  .description h2, .description p {
+    text-align: center;
+  }
+  
+#pricing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.pricing {
+  border: 1px black solid;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+  
+  .pricing p {
+    padding: 20px 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #ddd;
+  }
+
+}
